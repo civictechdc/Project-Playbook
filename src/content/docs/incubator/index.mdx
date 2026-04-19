@@ -1,0 +1,339 @@
+---
+title: Micro-Incubator
+description: A guide in my new Starlight docs site.
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 4
+---
+
+import PathFinder from '../../../components/PathFinder.jsx'
+
+The Civic Tech DC Micro-Incubator accelerates civic technology projects by providing lightweight support system for civic builders where project leads can:
+- Access community resources and mentors
+- Recruit contributors for open-source civic projects
+- Gain visibility and momentum for their initiatives
+
+--- 
+h2 Requirements
+
+#### Eligibility
+
+- **Organizations:** Our strongest partners historically have been local nonprofits and community-based organizations. Whether it's digitizing paper processes, building new forms, or building proofs-of-concept, we're always interested in seeing how we can use technology to make an impact in our community.
+- **Government:** Local government provides invaluable services and help to our community and we're interested in helping make it more effective. This might mean developing a community outreach and feedback project, building a tool for people to request a particular service, or building some other proof-of-concept for how government interacts with its constituents.
+- **Activists and community members:** Do you have an idea of how technology could help solve a problem in your community? We're interested in hearing more! Those close to or experiencing a problem in our community likely know it best and have ideas for how it can be improved.
+
+Note, even if you don’t meet the criteria as one of the three categories, you are still welcome to pitch a project!
+
+####  Non-Eligibility
+
+- Civic Tech DC and incubated projects do not run electoral campaigns or endorse candidates. We are a nonpartisan organization. We can work with advocacy partners, but outputs should center on public interest outcomes and be usable across parties.
+- Startups are allowed as long as they pitch a civic-focused project and fit the project requirements. 
+
+--- 
+# Pitching A Project 
+
+First of all, that’s great! We're always looking for new and impactful projects where we can use our skills to help our community. Successfully pitched projects enter our incubator. 
+
+#### How to Pitch
+
+##### Meet Us at One of the Project Nights 
+We host biweekly meetings, so stop by to share your idea! If you are a good fit, we likely won’t be able to pilot you before presentations start, so getting in touch virtually before the event to have some correspondence first is ideal. Or you can work on your project and pitch at the end.
+
+##### Get in Touch Virtually 
+You can get in touch by emailing us at team@civictechdc.org to see if your project is a good fit with Civic Tech DC. This may be some email back-and-forth, a virtual chat, or a meeting in person to hear more about the problem you're facing.
+
+#### What Qualifies as A Project: Defining Scope
+
+We welcome all civic-minded ideas, but there are a few requirements for a project to enter the incubator:
+
+✔ It has to be related to civic tech in some way. See definition here. 
+
+✔ It has to be open source. Open source allows people to contribute to it. See the github here. civictechdc/civictechdc-website
+
+✔ Projects should benefit a local community or partner. A clear validator or user partner helps ensure your project meets a real need.
+
+✔ You have to be committed as a project lead to support the project. 
+All of the projects are volunteer-run, so project pitchers are expected to lead the project. It’s helpful if you, or another member of your team will be available to work with the volunteers to define the scope and development. This also means volunteer interest and capacity will vary so the timeline will need to be flexible. This does not mean you will be solely responsible for doing everything; we can help you scope the project so it aligns with your time availability or level of interest to share organizing responsibility. 
+
+#### I Pitched. Now What?
+
+###### Develop a project plan and milestones
+If your project sounds like a good fit, we'll work with you to develop a loose project plan with achievable milestones. This will include a description of the problem you're solving, the technology or skills that you need to help solve it, and concrete steps that will build towards the solution.
+
+###### Create a request for a website page + create a slack 
+We provide an online space to showcase your project, list volunteers, and coordinate work. Your project will be displayed in our Project Gallery, with badges for “Open-source,” “Volunteer-ready,” and “Validated” to highlight its status.
+
+###### Continue attending events periodically to keep the work moving and on-track
+You don't need to attend every one of our events but successful projects do require consistency. Some of our members may be interested in helping you lead the project in which case they show up to events and work on the project while coordinating with you so that you can attend less frequently.
+
+Some projects also organize additional working sessions independent of Civic Tech DC events to make even faster and more focused progress.
+
+--- 
+## Anatomy of A Project
+
+#### Introduction
+
+Building civic technology is not like building a typical software product. You are working with communities, not just users. You are solving public problems, not chasing product-market fit. You are often working with under-resourced partners, limited timelines, and a volunteer team that may turn over.
+
+This guide walks through the anatomy of a civic tech project from first idea to handoff. It is organized around the questions every good project needs to answer, and the decisions every team needs to make deliberately.
+
+Use this guide when scoping a new project, onboarding contributors, or checking whether your project is on track.
+
+#### Part 1: The Basics
+
+Before writing a single line of code, your team needs to clearly answer four foundational questions. Projects that skip this step tend to build the wrong thing, lose momentum, or fail to get adopted.
+
+##### Problem Statement
+
+A good problem statement is specific, grounded in real people's experiences, and distinct from a solution. It answers:
+
+- Who is experiencing this problem?
+- What specific friction, gap, or harm are they experiencing?
+- Why hasn't it been solved already?
+- What is the cost of leaving it unsolved?
+
+##### Example
+
+Grassroots organizers in DC collecting petition signatures have no reliable way to validate voter registration status in real time. Manual verification takes hours and introduces errors, leading to invalid submissions that disqualify campaigns from ballot access.
+
+
+##### Solution Hypothesis
+
+Civic tech has a long history of teams falling in love with a technology and working backwards to justify it. Avoid this trap. Your solution hypothesis should be a testable claim, not a certainty.
+
+A strong hypothesis sounds like:
+
+> "We believe that [doing X] will solve [problem Y] for [person Z], and we will know it's working when [measurable outcome]."
+
+##### Problem / Solution Linkage
+
+This is worth its own section because it is where most civic tech projects go wrong. Ask honestly:
+
+- Does your proposed solution directly address the root cause of the problem, or just a symptom?
+- Does the solution require behavior change from your users? If so, have you accounted for that?
+- Is technology actually the right tool here, or would a policy change or process improvement solve it more effectively?
+- Would the people experiencing this problem recognize your solution as useful?
+
+##### Red Flag
+
+If you can describe your solution without mentioning the specific people it helps or the specific problem it solves, you probably have a linkage gap.
+
+##### Success Metrics
+
+Define what success looks like before you build, not after. Good metrics are specific, measurable, and tied directly to the problem you are solving — not just to shipping.
+
+| Weak Metric | Strong Metric |
+|------------|--------------|
+| The app is launched | 50 organizers validate signatures in the first 30 days |
+| Users are satisfied | Partner organization adopts tool as their primary workflow |
+| The code is open source | Two other organizations fork and deploy the project independently |
+
+##### Scope
+
+Scope creep kills volunteer projects. Define explicitly what is in scope and, just as importantly, what is out of scope. A tight scope with a real user is better than an expansive scope that never ships.
+
+- What does v1 include?
+- What are you deliberately deferring to a later version?
+- What will you never build, and why?
+
+##### Tip
+
+Write your scope as a short paragraph, not just a feature list. If you cannot explain the scope in plain language, it is probably not clearly defined yet.
+
+---
+
+#### Part 2: The People
+
+Civic tech is about communities, not just code. Getting the people side right is just as important as the technical decisions — often more so.
+
+###### Stakeholder Map
+
+Before building, map out everyone with a stake in your project.
+
+| Type | Who They Are | What They Need From You |
+|------|-------------|------------------------|
+| End Users | People who will actually use the tool day to day | A tool that solves their actual problem with minimal friction |
+| Community Partner | The nonprofit, org, or agency you are building with | Reliability, transparency, and a tool they can actually maintain |
+| Approvers / Gatekeepers | People who have to say yes for the project to move forward | Confidence that the project is low-risk and high-value |
+| Affected Communities | People impacted by the problem or solution, not necessarily users | To not be harmed, and ideally to benefit |
+
+###### User Research
+
+You cannot build for people you have not talked to. Even a handful of conversations before you start building will save you months of building the wrong thing.
+
+At minimum, before you build:
+
+- Conduct at least 3 to 5 interviews with real potential users
+- Ask about their current workflow, not your proposed solution
+- Find out what they have already tried and why it did not work
+- Identify what a successful outcome actually looks like from their perspective
+
+###### Key Question
+
+If you showed your project to the people experiencing this problem, would they immediately understand why it was built for them? If the answer is uncertain, do more research.
+
+###### Community Partner
+
+Every Civic Tech DC project should have a real-world partner — a nonprofit, government office, or community organization that validates the problem and will use or champion the output.
+
+A strong partner relationship means:
+
+- They have confirmed the problem is real and significant
+- They have a named point of contact who attends check-ins
+- They have agreed to test or adopt the tool after handoff
+- They understand this is volunteer-built and timelines are flexible
+
+Note: A partner who is enthusiastic at the start but unavailable to give feedback or access data is a risk. Establish early whether they can commit meaningful time to the project.
+
+#### Part 3: The Build
+
+Once your problem is validated and your people are aligned, it is time to make technical decisions.
+
+##### Tech Stack Decisions
+
+Choose boring technology. In civic tech, the goal is a tool that works reliably, can be maintained after handoff, and can be contributed to by a range of skill levels.
+
+When choosing your stack, ask:
+
+- Can a mid-level volunteer contributor understand and work with this?
+- Will the partner be able to find someone to maintain this in two years?
+- Are there security or privacy considerations that constrain the choice?
+- Does the stack match the skills available in the CTDC volunteer community?
+
+
+##### Architecture Overview
+
+At minimum, document:
+
+- The main components and what each does
+- How data flows through the system
+- Where the major integration points are
+- What external dependencies exist
+
+##### Architecture Decision Records (ADRs)
+
+A minimal ADR includes:
+
+- Context
+- Decision
+- Alternatives
+- Consequences
+- Status (Proposed / Accepted / Deprecated / Superseded)
+
+##### Open Source Requirements
+
+All Civic Tech DC projects must be open source.
+
+- Use a public GitHub repository under the civictechdc organization
+- Include a LICENSE file
+- Write a README
+- Use issues to track work
+- Document your contribution process
+
+##### Security and Privacy
+
+Before you build, answer:
+
+- What personally identifiable information (PII) will this project collect or process?
+- Who will have access to that data and under what conditions?
+- What is your data retention and deletion policy?
+- Are there legal constraints on the data you are using?
+- What happens if the system is compromised?
+
+##### Rule of Thumb
+
+If you are unsure whether a data decision is safe, collect less data.
+
+#### Part 4: The Sustainability
+
+A civic tech project that launches but cannot be maintained is not a success.
+
+##### Maintenance Load
+
+Estimate:
+
+- How often updates are needed
+- Whether data needs active updating
+- What breaks after six months of no maintenance
+- Whether the partner has technical capacity
+
+##### Adoption Path
+
+Think through:
+
+- What the partner must do to start using the tool
+- Whether adoption requires training or onboarding
+- External dependencies
+- Who the internal champion is
+
+##### Common Failure Mode
+
+A technically complete project that never gets adopted because no one planned for change management.
+
+#### Part 5: The Civic Impact Argument
+
+##### Civic Impact Framework
+
+Your project should answer:
+
+- What specific aspect of civic life does this strengthen?
+- Who benefits and in what measurable way?
+- Does this increase access, participation, transparency, or accountability?
+- Could this cause harm?
+- Is this replicable?
+
+##### Nonpartisan Test
+
+Before launching, ask:
+
+- Could this tool be used across the political spectrum?
+- Does this project advance a specific political agenda?
+- Would outputs be seen as partisan?
+
+##### Note: Working with advocacy organizations is fine. Building tools for a single political party or campaign is not.
+
+#### Project Readiness Checklist
+
+###### The Basics
+
+- □ Problem statement is written and validated with real users  
+- □ Solution hypothesis is testable and clearly linked to the problem  
+- □ Success metrics are defined before building begins  
+- □ Scope is written down  
+
+###### The People
+
+- □ Stakeholder map is complete  
+- □ 3 to 5 user interviews completed  
+- □ Community partner identified  
+- □ Partner committed to feedback and testing  
+
+###### The Build
+
+- □ Tech stack chosen and documented  
+- □ Architecture overview exists  
+- □ Public GitHub repo created  
+- □ README, LICENSE, CONTRIBUTING present  
+- □ PII decisions documented  
+- □ Security review completed  
+
+###### The Sustainability
+
+- □ Handoff plan written  
+- □ Maintenance load assessed  
+- □ Adoption path documented  
+
+###### The Civic Impact
+
+- □ Civic impact argument is clear  
+- □ Project passes nonpartisan test  
+- □ No unintended harms identified  
+
+--- 
+## Gain visibility and momentum
+By participating in the Micro-Incubator, your project will gain:
+
+Public outputs such as blogs, GitHub repos, or demos
+Recognition as a part of the Civic Tech DC ecosystem
+Opportunities to attract new volunteers, partners, and stakeholders
+Pitching a project is your chance to turn an idea into real, community-driven impact. We’re here to support you and help you connect with the people and resources you need to succeed.

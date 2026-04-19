@@ -1,40 +1,78 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Civic Tech for the Community
+description: A guide to building, joining, and understanding civic tech in the DC community.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: Building civic technology with DC volunteers since 2012.
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: What is Civic Tech?
+      link: /whatiscivictech/
+      variant: primary
+    - text: Read before contributing
+      link: /readme/
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components'
 
-## Next steps
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<p style={{ fontSize: '1.1rem', lineHeight: '1.7', maxWidth: '600px', opacity: 0.75, marginBottom: '-6rem', marginTop: '-2rem' }}>
+  Founded in 2012 as Code for DC, Civic Tech DC has spent over a decade building civic technology, organizing volunteers, and partnering with nonprofits to address real community needs. This playbook captures what we've learned — open to our community, the broader civic tech ecosystem, and the DC tech world.
+</p>
+
+## Choose Your Path
+
+<CardGrid>
+  <a href="/contributors/" style={{ textDecoration: 'none' }}>
+    <Card title="Join an existing project" icon="users">
+      Join a project, meet the community, and start contributing.
+    </Card>
+  </a>
+  <a href="/builders/" style={{ textDecoration: 'none' }}>
+    <Card title="Build a new project" icon="rocket">
+      Pitch an idea, form a team, and bring a civic tech project to life.
+    </Card>
+  </a>
 </CardGrid>
+
+## Structures
+
+<CardGrid>
+  <a href="/incubator/" style={{ textDecoration: 'none' }}>
+    <Card title="Project Incubator" icon="puzzle">
+      A structured process for developing your Civic Tech project from idea to launch.
+    </Card>
+  </a>
+</CardGrid>
+
+## Key Resources
+
+<CardGrid>
+  <a href="" style={{ textDecoration: 'none' }}>
+    <Card title="Civic Tech Upskilling" icon="open-book">
+      Learn the 101 skills needed to contribute effectively to civic tech.
+    </Card>
+  </a>
+  <a href="/projects/" style={{ textDecoration: 'none' }}>
+    <Card title="Project Resources" icon="document">
+      Tools, guides, and templates for project leads and teams.
+    </Card>
+  </a>
+  <a href="/aicivictech/" style={{ textDecoration: 'none' }}>
+    <Card title="AI and Civic Tech" icon="star">
+      How to use AI tools and understand their implications in civic tech work.
+    </Card>
+  </a>
+</CardGrid>
+
+<div style={{
+  marginTop: '4rem',
+  paddingTop: '2rem',
+  borderTop: '1px solid rgba(255,255,255,0.08)',
+  textAlign: 'center',
+  fontSize: '0.85rem',
+  opacity: 0.4,
+  letterSpacing: '0.05em',
+}}>
+  Start anywhere. Move between paths anytime.
+</div>

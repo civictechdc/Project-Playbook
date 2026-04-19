@@ -1,0 +1,308 @@
+---
+title: Anatomy of a Project
+description: A practical framework for teams building civic technology.
+---
+
+# CIVIC TECH DC  
+## Technical Guide  
+## Anatomy of a Project  
+
+*A practical framework for teams building civic technology*  
+civictechdc.org
+
+---
+
+## Introduction
+
+Building civic technology is not like building a typical software product. You are working with communities, not just users. You are solving public problems, not chasing product-market fit. You are often working with under-resourced partners, limited timelines, and a volunteer team that may turn over.
+
+This guide walks through the anatomy of a civic tech project from first idea to handoff. It is organized around the questions every good project needs to answer, and the decisions every team needs to make deliberately.
+
+Use this guide when scoping a new project, onboarding contributors, or checking whether your project is on track.
+
+---
+
+## Part 1: The Basics
+
+Before writing a single line of code, your team needs to clearly answer four foundational questions. Projects that skip this step tend to build the wrong thing, lose momentum, or fail to get adopted.
+
+### Problem Statement
+
+A good problem statement is specific, grounded in real people's experiences, and distinct from a solution. It answers:
+
+- Who is experiencing this problem?
+- What specific friction, gap, or harm are they experiencing?
+- Why hasn't it been solved already?
+- What is the cost of leaving it unsolved?
+
+**Example**
+
+Grassroots organizers in DC collecting petition signatures have no reliable way to validate voter registration status in real time. Manual verification takes hours and introduces errors, leading to invalid submissions that disqualify campaigns from ballot access.
+
+---
+
+### Solution Hypothesis
+
+Civic tech has a long history of teams falling in love with a technology and working backwards to justify it. Avoid this trap. Your solution hypothesis should be a testable claim, not a certainty.
+
+A strong hypothesis sounds like:
+
+> "We believe that [doing X] will solve [problem Y] for [person Z], and we will know it's working when [measurable outcome]."
+
+---
+
+### Problem / Solution Linkage
+
+This is worth its own section because it is where most civic tech projects go wrong. Ask honestly:
+
+- Does your proposed solution directly address the root cause of the problem, or just a symptom?
+- Does the solution require behavior change from your users? If so, have you accounted for that?
+- Is technology actually the right tool here, or would a policy change or process improvement solve it more effectively?
+- Would the people experiencing this problem recognize your solution as useful?
+
+**Red Flag**
+
+If you can describe your solution without mentioning the specific people it helps or the specific problem it solves, you probably have a linkage gap.
+
+---
+
+### Success Metrics
+
+Define what success looks like before you build, not after. Good metrics are specific, measurable, and tied directly to the problem you are solving — not just to shipping.
+
+| Weak Metric | Strong Metric |
+|------------|-------------|
+| The app is launched | 50 organizers validate signatures in the first 30 days |
+| Users are satisfied | Partner organization adopts tool as their primary workflow |
+| The code is open source | Two other organizations fork and deploy the project independently |
+
+---
+
+### Scope
+
+Scope creep kills volunteer projects. Define explicitly what is in scope and, just as importantly, what is out of scope. A tight scope with a real user is better than an expansive scope that never ships.
+
+- What does v1 include?
+- What are you deliberately deferring to a later version?
+- What will you never build, and why?
+
+**Tip**
+
+Write your scope as a short paragraph, not just a feature list. If you cannot explain the scope in plain language, it is probably not clearly defined yet.
+
+---
+
+## Part 2: The People
+
+Civic tech is about communities, not just code. Getting the people side right is just as important as the technical decisions — often more so.
+
+### Stakeholder Map
+
+Before building, map out everyone with a stake in your project.
+
+| Type | Who They Are | What They Need From You |
+|------|-------------|------------------------|
+| End Users | People who will actually use the tool day to day | A tool that solves their actual problem with minimal friction |
+| Community Partner | The nonprofit, org, or agency you are building with | Reliability, transparency, and a tool they can actually maintain |
+| Approvers / Gatekeepers | People who have to say yes for the project to move forward | Confidence that the project is low-risk and high-value |
+| Affected Communities | People impacted by the problem or solution | To not be harmed, and ideally to benefit |
+
+---
+
+### User Research
+
+You cannot build for people you have not talked to.
+
+At minimum, before you build:
+
+- Conduct at least 3 to 5 interviews with real potential users  
+- Ask about their current workflow, not your proposed solution  
+- Find out what they have already tried and why it did not work  
+- Identify what a successful outcome actually looks like from their perspective  
+
+**Key Question**
+
+If you showed your project to the people experiencing this problem, would they immediately understand why it was built for them?
+
+---
+
+### Community Partner
+
+Every Civic Tech DC project should have a real-world partner.
+
+A strong partner relationship means:
+
+- They have confirmed the problem is real and significant  
+- They have a named point of contact who attends check-ins  
+- They have agreed to test or adopt the tool after handoff  
+- They understand this is volunteer-built and timelines are flexible  
+
+**Note**
+
+A partner who is enthusiastic at the start but unavailable to give feedback or access data is a risk.
+
+---
+
+## Part 3: The Build
+
+### Tech Stack Decisions
+
+Choose boring technology.
+
+Ask:
+
+- Can a mid-level volunteer contributor understand this?
+- Will the partner be able to maintain it later?
+- Are there security or privacy constraints?
+- Does it match available skills?
+
+---
+
+### Architecture Overview
+
+Document:
+
+- Main components  
+- Data flow  
+- Integration points  
+- External dependencies  
+
+---
+
+### Architecture Decision Records (ADRs)
+
+A minimal ADR includes:
+
+- Context  
+- Decision  
+- Alternatives  
+- Consequences  
+- Status  
+
+---
+
+### Open Source Requirements
+
+- Public GitHub repo under civictechdc  
+- LICENSE file (MIT default)  
+- README  
+- Issues for tracking work  
+- CONTRIBUTING.md  
+
+---
+
+### Security and Privacy
+
+Before you build:
+
+- What PII is collected?  
+- Who has access?  
+- Data retention policy?  
+- Legal constraints?  
+- What happens if compromised?  
+
+**Rule of Thumb**
+
+If unsure, collect less data.
+
+---
+
+## Part 4: The Sustainability
+
+### Handoff Plan
+
+Document:
+
+- Ownership after incubation  
+- Deployment and rollback  
+- Credentials and access  
+- Maintenance tasks  
+- Contact if something breaks  
+
+---
+
+### Maintenance Load
+
+Estimate:
+
+- Update frequency  
+- Data dependencies  
+- What breaks if unmaintained  
+- Partner capacity  
+
+---
+
+### Adoption Path
+
+Think through:
+
+- How partner integrates it  
+- Training needs  
+- External dependencies  
+- Internal champion  
+
+**Common Failure Mode**
+
+A complete project that no one uses.
+
+---
+
+## Part 5: The Civic Impact Argument
+
+### Civic Impact Framework
+
+- What civic aspect is strengthened?  
+- Who benefits and how?  
+- Does it increase access, participation, transparency, or accountability?  
+- Could it cause harm?  
+- Is it replicable?  
+
+---
+
+### Nonpartisan Test
+
+- Usable across political spectrum?  
+- Advances a political agenda?  
+- Seen as partisan?  
+
+**Note**
+
+Advocacy orgs are fine. Party tools are not.
+
+---
+
+## Project Readiness Checklist
+
+### The Basics
+- [ ] Problem statement validated  
+- [ ] Solution hypothesis defined  
+- [ ] Success metrics set  
+- [ ] Scope defined  
+
+### The People
+- [ ] Stakeholder map complete  
+- [ ] 3–5 user interviews done  
+- [ ] Community partner identified  
+- [ ] Partner committed  
+
+### The Build
+- [ ] Tech stack documented  
+- [ ] Architecture overview exists  
+- [ ] GitHub repo created  
+- [ ] README, LICENSE, CONTRIBUTING present  
+- [ ] PII decisions documented  
+- [ ] Security review completed  
+
+### The Sustainability
+- [ ] Handoff plan written  
+- [ ] Maintenance owner identified  
+- [ ] Adoption path documented  
+
+### The Civic Impact
+- [ ] Civic impact clear  
+- [ ] Passes nonpartisan test  
+- [ ] No unintended harms  
+
+---
+
+This guide is open source and community-maintained. If something is unclear, outdated, or missing, you are encouraged to contribute. Find us at civictechdc.org or on GitHub at github.com/civictechdc.
