@@ -1,58 +1,92 @@
 ---
-title: Civic Tech for the Community
+title: Civic Tech for Community
 description: A guide to building, joining, and understanding civic tech in the DC community.
 template: splash
-hero:
-  tagline: Building civic technology with DC volunteers since 2012.
 ---
+
+<p style={{
+  fontSize: '1.15rem',
+  lineHeight: '1.8',
+  maxWidth: '800px',
+  opacity: 0.8,
+  marginBottom: '3rem'
+}}>
+Civic Tech DC has spent over a decade building civic technology, organizing volunteers, and partnering with groups to address real community needs. This playbook captures what we've learned.
+</p>
 
 import { Card, CardGrid } from '@astrojs/starlight/components'
 
-{/*
-<p style={{ fontSize: '1.1rem', lineHeight: '1.7', maxWidth: '600px', opacity: 0.75, marginBottom: '-6rem', marginTop: '-2rem' }}>
-  Founded in 2012 as Code for DC, Civic Tech DC has spent over a decade building civic technology, organizing volunteers, and partnering with nonprofits to address real community needs. This playbook captures what we've learned — open to our community, the broader civic tech ecosystem, and the DC tech world.
-</p> */}
+<img
+  src="/images/frontpage.jpg"
+  alt="Civic Tech DC community"
+  style={{
+    width: '100%',
+    height: '420px',
+    objectFit: 'cover',
+    borderRadius: '18px',
+    marginTop: '1rem',
+    marginBottom: '2.5rem'
+  }}
+/>
+
+
+<p style={{
+  fontSize: '1.15rem',
+  lineHeight: '1.8',
+  maxWidth: '800px',
+  opacity: 0.8,
+  marginBottom: '3rem'
+}}>
+</p>
 
 ## Introducing Civic Tech DC
+
 <CardGrid>
   <a href="/civictech/" style={{ textDecoration: 'none' }}>
     <Card title="What is Civic Tech" icon="users">
-      How do we define what civic tech is.
+      A shared definition of civic tech.
     </Card>
   </a>
+
   <a href="/history/" style={{ textDecoration: 'none' }}>
     <Card title="History of Civic Tech DC" icon="rocket">
-      The history of the community from 2012.
+      The evolution of the community from 2012 to today.
     </Card>
   </a>
 </CardGrid>
+
+---
 
 ## Choose Your Path
 
 <CardGrid>
   <a href="/contributors/" style={{ textDecoration: 'none' }}>
     <Card title="Join A Project" icon="users">
-      Join a project, meet the community, and start contributing.
+      Join a project, meet others, and start contributing.
     </Card>
   </a>
+
   <a href="/builders/" style={{ textDecoration: 'none' }}>
     <Card title="Start A Project" icon="rocket">
-      Pitch an idea, form a team, and bring a civic tech project to life.
+      Turn ideas into civic tools with community support.
     </Card>
   </a>
 </CardGrid>
 
-## Resources 
+---
+
+## Resources
 
 <CardGrid>
   <a href="/projects/" style={{ textDecoration: 'none' }}>
-    <Card title="Resources for Project Leads" icon="users">
-      Building and maintaining a community.
+    <Card title="Project Resources" icon="users">
+      Guides for building and sustaining civic tech projects.
     </Card>
   </a>
+
   <a href="" style={{ textDecoration: 'none' }}>
-    <Card title="Civic Tech Academy" icon="rocket">
-      More coming soon!
+    <Card title="Civic Tech and AI" icon="rocket">
+      Learning resources and workshops (coming soon).
     </Card>
   </a>
 </CardGrid>

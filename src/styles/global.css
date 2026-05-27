@@ -1,0 +1,40 @@
+.hero {
+  padding-block: 1.5rem !important;
+}
+
+/* Paragraph spacing */
+.sl-markdown-content p {
+  margin-bottom: 1rem !important;
+}
+
+/* Headings spacing */
+.sl-markdown-content h2 {
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Card grids */
+.sl-card-grid {
+  gap: 1rem !important;
+  margin-top: 1rem !important;
+}
+
+/* Optional: tighten overall page container */
+main {
+  padding-top: 1rem !important;
+}
+
+.hero h1 {
+  font-size: 3.5rem !important;
+  line-height: 1.15 !important;
+  margin-bottom: 0.75rem !important;
+  letter-spacing: -0.02em;
+}
+
+.sl-sidebar {
+  display: none !important;
+}
+
+.sl-content {
+  max-width: 100% !important;
+}

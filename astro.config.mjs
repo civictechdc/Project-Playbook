@@ -7,6 +7,9 @@ export default defineConfig({
     react(),
     starlight({
       title: 'Civic Tech Playbook',
+
+      customCss: ['./src/styles/global.css'],
+
       social: [
         {
           icon: 'github',
@@ -14,17 +17,15 @@ export default defineConfig({
           href: 'https://github.com/withastro/starlight'
         }
       ],
+
       sidebar: [
         {
-          label: 'Builders',
+          label: 'Explore',
           items: [
-            { label: 'Overview', link: '/builders/' }
-          ]
-        },
-        {
-          label: 'Contributors',
-          items: [
-            { label: 'Overview', link: '/contributors/' }
+            { label: 'Start Here', link: '/' },
+            { label: 'What is Civic Tech', link: '/civictech/' },
+            { label: 'History', link: '/history/' },
+            { label: 'Projects', link: '/projects/' }
           ]
         }
       ]

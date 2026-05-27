@@ -1,0 +1,196 @@
+---
+title: Incubator Track
+---
+
+import PathFinder from '../../../components/PathFinder.jsx'
+
+On the previous page of determining whether your project fits Civic Tech DC's criteria, this section helps you build it 
+out properly. Building civic tech isn't like building a normal software product. You're working with broad 
+communities, not just standard users, and solving real public problems that are often systemic and complex. 
+
+---
+## Part 1: Leadership Mode
+
+Your leadership mode defines who is driving the project and what that means in practice. It shapes your responsibilities, your relationship with the community, and what you need to have in place before work begins.
+
+#### Community-initiated
+You represent an organization that has identified a problem and is bringing it to Civic Tech DC for help. What you're responsible for:
+
+- As the domain expert, volunteers will look to you to understand the problem and 
+validate the solution. Unlike a volunteer-led project where the team is collectively figuring out what could work, 
+here you are directing that.
+- You need a named point of contact who can attend biweekly Project Night check-ins and respond to questions between sessions. That 
+can be you or someone else, but it needs to be consistent.
+- Providing access to users, workflows, data, and any internal stakeholders who need to weigh in on the work.
+- Being honest when something isn't working. Volunteers are giving their time, and the fastest way to disappoint them is to let the 
+project drift in the wrong direction because of internal organizational pressures without saying anything.
+- Taking ownership at handoff. The project doesn't end when the volunteers wrap up — your organization needs to be ready to use and 
+maintain what gets built.
+
+#### Volunteer-initiated
+You've spotted a problem and want to build something around it. You're driving this. That means you're responsible not 
+just for the build but for finding and maintaining a community partner and keeping the project grounded in real need.
+What you're responsible for:
+
+- Finding a real-world partner - a community organization, government office, or civic group - who can validate the problem 
+and will use or champion the output. The Incubator can help with this, but you need to be actively working on it.
+- Keeping the project tethered to that partner's actual needs, not just your vision of what would be useful.
+- Recruiting and coordinating contributors. Welecome everyone regardless of skill set.
+- Planning for handoff from day one. Who owns this after you're done? 
+
+Whichever mode you're in, the expectation is the same of show up consistently and communicate openly.
+
+
+## Part 2: The Anatomy of the Project 
+Before writing any code, your team needs to agree on four things. Projects that skip this step tend to build the wrong thing, run out of steam, or ship something nobody adopts.
+
+### The Basics 
+
+#### Problem statement
+A good problem statement is specific and grounded in real people's experiences and problems.
+
+<div style={{
+  margin: "1rem 0",
+  padding: "12px 14px",
+  borderLeft: "3px solid var(--sl-color-accent)",
+  background: "var(--sl-color-gray-6)",
+  borderRadius: "8px",
+  opacity: 0.95
+}}>
+<strong style={{ fontWeight: 600 }}>Voter Tool Example: </strong>
+Grassroots organizers in DC collecting petition signatures have no reliable way to 
+check voter registration status in real time. Manual verification takes hours and introduces 
+errors, which can get campaigns disqualified from ballot access.
+</div>
+
+It should name a specific group (DC organizers), a specific pain (no real-time verification), and a specific consequence (disqualification). 
+
+Try it yourself: Write your problem statement in 3–4 sentences. Then read it back and ask — does it mention any technology? If it does, rewrite it until it doesn't.
+
+#### Solution hypothesis
+Civic tech has a long history of starting with a technology and working backwards to justify it. The solution does end up being the tech, but the thinking should flow the other way. Map out the process first. Your hypothesis should be something you can test: "We think doing X will help Y accomplish Z, and we'll know it's working when we see [measurable outcome]."
+Map out the process first. Your hypothesis should be something you can actually test.
+
+<div style={{
+  margin: "1rem 0",
+  padding: "12px 14px",
+  borderLeft: "3px solid var(--sl-color-accent)",
+  background: "var(--sl-color-gray-6)",
+  borderRadius: "8px",
+  opacity: 0.95
+}}>
+<strong style={{ fontWeight: 600 }}>Voter Tool Example: </strong>
+We think a lightweight mobile tool that cross-references the DC voter registration database in real time will 
+help organizers validate signatures on the spot, which will reduce errors and processing time. We'll know it's w
+orking when organizers report spending less than 10 minutes on verification per canvassing session.
+</div>
+
+Try it yourself: Fill in the hypothesis template above for your project. If you can't fill it in cleanly, your problem statement probably needs more work first.
+
+#### Problem/solution fit
+This is where most civic tech projects run into trouble. You should ask questions of does your solution addresses the root cause, or just a symptom. Does it require behavior change from users, and have you accounted for that? Would a policy fix or process change work better than software?
+
+<div style={{
+  margin: "1rem 0",
+  padding: "12px 14px",
+  borderLeft: "3px solid var(--sl-color-accent)",
+  background: "var(--sl-color-gray-6)",
+  borderRadius: "8px",
+  opacity: 0.95
+}}>
+<strong style={{ fontWeight: 600 }}>Voter Tool Example: </strong>
+In the organizer case, the root cause is that there's no accessible, real-time connection to voter registration data, 
+not that organizers are bad at spreadsheets. 
+A tool that just makes the spreadsheet prettier doesn't fix anything. The solution is not just about the tech; 
+it requires organizers to change how they work in the field, which means understanding if the tool would be accepted and 
+used by the organizing organization.
+</div>
+
+Try it yourself: Write down the root cause of your problem in one sentence. Then check — does your proposed solution actually address that, or something downstream of it?
+
+#### Success metrics
+Figure out what success looks like before you build, not after. Good metrics are tied to the problem you set out to solve, not just to whether something shipped.
+
+| Instead of | Try this |
+|------------|----------|
+| The app is launched | 50 organizers validate signatures within 30 days |
+| Users are satisfied | Partner organization adopts it as primary workflow |
+| The code is open source | Two organizations fork and deploy it independently |
+
+<div style={{
+  margin: "1rem 0",
+  padding: "12px 14px",
+  borderLeft: "3px solid var(--sl-color-accent)",
+  background: "var(--sl-color-gray-6)",
+  borderRadius: "8px",
+  opacity: 0.95
+}}>
+<strong style={{ fontWeight: 600 }}>Voter Tool Example: </strong>
+A strong metric here isn't "organizers are using the app," it's that signature error rates drop 
+by at least 50% in campaigns that use the tool, compared to their previous manual process. That's tied 
+directly to the original problem, errors causing campaign disqualification, not just to whether something got built and handed over.
+</div>
+
+Try it yourself: Write three success metrics for your project. For each one, ask — would this metric still look good if the underlying problem wasn't actually solved? If yes, rewrite it.
+
+---
+### The People
+
+Getting the people side right matters just as much as the technical decisions. Before building, think through everyone who has a stake in the project. End users need a tool that actually solves their problem. Your community partner needs reliability and something they can maintain. And the broader community affected by the problem shouldn't be harmed by what you build.
+
+#### User research
+When starting out, prioritize conversations with potential users. This can save you months of building something that is never adopted. Ideally, speak with at least 2–3 real users from your target group. In these conversations, avoid introducing your proposed solution too early. Instead, focus on understanding their current workflows, pain points, and challenges. Try to understand what a “successful outcome” looks like from their perspective, not yours. 
+
+Resources to get started:
+
+18F's Interview Checklist — practical tips for running user interviews in a civic context
+Calendly — free tool for scheduling interviews without the back-and-forth
+Otter.ai — free transcription so you can focus on the conversation
+
+#### Community partner
+Every project should have a real-world partner, a nonprofit, government office, or community organization that validates the problem and will actually use or champion what you build. 
+
+
+---
+
+### The Build
+
+#### Tech stack
+Choose what can be considered boring technology. The goal is something that works reliably, 
+can be maintained after handoff, and doesn't require a specialist to keep it running. 
+The fanciest tech stack can be too hard to maintain. 
+
+A few defaults that work well for most civic tech projects:
+
+- Frontend: React, plain HTML/CSS
+- Backend: Python (Flask or Django), Node.js
+- Database: PostgreSQL, Airtable for lower-complexity projects
+- Hosting: Render, Railway, or GitHub Pages for static sites
+
+#### Open source
+All Civic Tech DC projects must be open source. Here is how you can set up your GitHub repository which should include a 
+README and a documented contribution process. 
+
+Getting started:
+
+- Create a repository under the [Civic Tech DC GitHub organization](https://github.com/orgs/civictechdc/repositories). Please request access in Slack if you don't have it yet
+- Use this README template to document your project
+- Choose a license — MIT is the most common for civic tech
+---
+
+### Sustainability
+
+Launching is not the finish line. Before you wrap up, think honestly about what comes next. How often will the product need updates? Does the data require active upkeep? What breaks if nobody touches it for six months? Does the partner have anyone who can own it internally?
+
+Adoption is its own challenge. Even a great tool fails if the partner doesn't have a clear path to actually using it. Think through what onboarding looks like, whether training is needed, and who the internal champion is. 
+
+ A README that explains what the project does and how to run it
+ Documented how to update any data or content the tool depends on
+ A named person at the partner organization who is taking ownership
+ A short onboarding guide or walkthrough for new users
+ Contacted the CTDC community about finding a long-term maintainer if the partner can't support one
+
+Resources:
+
+The Gov.uk Service Manual on handoffs — one of the best public references for sustainably transitioning civic tools
+Post in #projects on Slack if you're looking for someone to take over maintenance
