@@ -27,6 +27,13 @@ export default defineConfig({
             { label: 'History', link: '/history/' },
             { label: 'Projects', link: '/projects/' }
           ]
+        },
+        {
+          label: 'Resources',
+          items: [
+            { label: 'AWS Account Access', link: '/resources/aws/' },
+            { label: 'GitHub Organization Access', link: '/resources/github/' }
+          ]
         }
       ]
     })

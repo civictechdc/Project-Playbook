@@ -1,0 +1,44 @@
+---
+title: AWS Account Access
+---
+
+Need cloud resources to host your project? Civic Tech DC can give projects access to an AWS account, paid for through our AWS credits. Because those credits are shared across the community, this page walks you through how to request an account and what access comes with it.
+
+:::note
+Our credits are generous but not unlimited. We also have a tenet of developing in public and sticking to open source technologies wherever possible, so lean toward open tools and keep an eye on what you're spinning up.
+:::
+
+---
+
+## Requesting an Account
+
+Contact **[@Evan Tung](https://civictechdc.slack.com/team/U0632K5NDRD)** on Slack to create an AWS account for your project. By default, the account is named after your project, unless you request otherwise.
+
+---
+
+## What Access You Get
+
+Contributors are given the `CivicTechDCOperator` role by default. If your project needs more than that role allows, you can request the broader `AWSPowerUserAccess` role when you ask for your account.
+
+| Role | What it grants | When to request |
+|---|---|---|
+| **`CivicTechDCOperator`** *(default)* | Read-only visibility across all AWS services (`ReadOnlyAccess`) plus full access to Amazon Lightsail (`AmazonLightsail_FullAccess`) | Most projects |
+| **`AWSPowerUserAccess`** | Full access to most AWS services | When you need capabilities beyond Lightsail, such as Bedrock or SageMaker |
+
+If you need PowerUser access, just say so in your request and describe what you're planning to use so we can keep an eye on credit usage.
+
+---
+
+## About Amazon Lightsail
+
+Most projects live comfortably within Lightsail, which is why it's part of the default role. Lightsail is a simplified cloud platform designed for straightforward workloads, and it includes:
+
+- **Virtual private servers** (instances) for running your app
+- **S3 object storage** for files and assets
+- **Managed databases** so you don't have to run your own
+
+The big advantage for us is predictability: Lightsail uses flat-rate monthly pricing with no hidden fees or variable costs, which makes it easy for Civic Tech DC to budget for cloud resources.
+
+:::tip
+If your workload fits within virtual servers, storage, and a database, start with Lightsail. It keeps costs predictable and the setup simple.
+:::
