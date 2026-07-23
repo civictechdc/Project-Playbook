@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import react from '@astrojs/react';
 
 export default defineConfig({
+  site: 'https://playbook.civictechdc.org',
   integrations: [
     react(),
     starlight({
