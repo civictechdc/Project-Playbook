@@ -1333,3 +1333,13 @@ section > h2 {
     padding-left: 0;
   }
 }
+
+/* Hide right sidebar on selected pages */
+:root:has(.no-right-nav) .right-sidebar-container {
+  display: none !important;
+}
+
+/* Add right padding to AWS Account Access page */
+body:has(.no-right-nav) .sl-markdown-content {
+  padding-right: 7rem;
+}
