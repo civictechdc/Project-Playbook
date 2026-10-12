@@ -1,0 +1,27 @@
+---
+import Head from '@astrojs/starlight/components/Head.astro';
+---
+
+<Head />
+<script is:inline>
+  // Decide before the first paint so the page never flashes behind the intro.
+  if (location.pathname === '/' && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.dataset.heroTyping = '';
+    setTimeout(() => {
+      delete document.documentElement.dataset.heroTyping;
+      delete document.documentElement.dataset.heroReady;
+    }, 5000);
+  }
+  try {
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches &&
+        sessionStorage.getItem('civic-tech-playbook-intro-seen') !== 'true') {
+      document.documentElement.dataset.logoIntro = '';
+      sessionStorage.setItem('civic-tech-playbook-intro-seen', 'true');
+      // Keep the page available even if the component script fails to load.
+      setTimeout(() => {
+        delete document.documentElement.dataset.logoIntro;
+        delete document.documentElement.dataset.logoIntroReady;
+      }, 2000);
+    }
+  } catch {}
+</script>

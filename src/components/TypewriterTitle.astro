@@ -1,0 +1,46 @@
+---
+const lines = ['Build Technology', 'That Serves People'];
+let character = 0;
+---
+
+<h1 id="home-title" class="typewriter-title" aria-label={lines.join(' ')}>
+  {lines.map((line, index) => <>
+    {index > 0 && <br />}
+    <span aria-hidden="true">{line.split(' ').map((word, wordIndex) => <>
+      {wordIndex > 0 && <span class="typed-character" style={`--character: ${character++}`}> </span>}
+      <span class="typed-word">{Array.from(word).map((letter) => <span class="typed-character" style={`--character: ${character++}`}>{letter}</span>)}</span>
+    </>)}</span>
+  </>)}
+</h1>
+
+<style>
+  .typed-word { white-space: nowrap; }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(html[data-hero-typing]) .typed-character { opacity: 0; }
+    :global(html[data-hero-typing][data-hero-ready]) .typed-character {
+      animation: type-character 1ms linear calc(var(--character) * 45ms) forwards;
+    }
+    :global(html[data-hero-typing]) :global(.home-lead) { opacity: 0; }
+    :global(html[data-hero-typing]) :global(.home-hero-copy .main-site-button) { opacity: 0; visibility: hidden; }
+    :global(html[data-hero-typing][data-hero-ready]) :global(.home-lead) {
+      animation: reveal-introduction 400ms ease-out 1.5s forwards;
+    }
+    :global(html[data-hero-typing][data-hero-ready]) :global(.home-hero-copy .main-site-button) {
+      animation: reveal-introduction 250ms ease-out 1.9s forwards;
+    }
+  }
+  @keyframes type-character { to { opacity: 1; } }
+  @keyframes reveal-introduction { to { opacity: 1; visibility: visible; } }
+</style>
+
+<script>
+  const root = document.documentElement;
+  const start = () => {
+    if (root.hasAttribute('data-logo-intro')) return;
+    root.dataset.heroReady = '';
+    observer.disconnect();
+  };
+  const observer = new MutationObserver(start);
+  observer.observe(root, { attributes: true, attributeFilter: ['data-logo-intro'] });
+  start();
+</script>

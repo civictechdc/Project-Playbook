@@ -1,0 +1,30 @@
+---
+interface Props { src: string; alt: string; compact?: boolean; caption?: string; }
+const { src, alt, compact = false, caption } = Astro.props;
+---
+<div class:list={['image-text', { 'image-text-compact': compact }]}>
+  <div class="image-text-layout">
+    <div class="image-text-copy"><slot /></div>
+    <figure>
+      <img src={src} alt={alt} loading="lazy" decoding="async" />
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  </div>
+</div>
+
+<style>
+  .image-text { container-type: inline-size; margin-block: 1.5rem; }
+  .image-text-layout { display: grid; gap: 1.5rem; align-items: start; }
+  .image-text-copy { min-width: 0; }
+  .image-text-copy :global(> :first-child) { margin-top: 0; }
+  .image-text-copy :global(> :last-child) { margin-bottom: 0; }
+  img { display: block; width: 100%; height: auto; margin: 0; }
+  .image-text-layout > figure { margin: 0; min-width: 0; }
+  figcaption { margin-top: .5rem; font-size: .95rem; line-height: 1.5; }
+  .image-text-compact figure { max-width: 17.5rem; justify-self: start; }
+  .image-text-compact img { max-width: 17.5rem; justify-self: start; }
+  @container (min-width: 38rem) {
+    .image-text-layout { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2rem; }
+    .image-text-compact .image-text-layout { grid-template-columns: minmax(0, 1fr) 17.5rem; }
+  }
+</style>

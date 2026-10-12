@@ -1,0 +1,40 @@
+<div class="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div class="reading-progress-fill"></div>
+</div>
+
+<script>
+  const progress = document.querySelector<HTMLElement>('.reading-progress');
+  const fill = progress?.querySelector<HTMLElement>('.reading-progress-fill');
+  let pending = false;
+  const updateProgress = () => {
+    const distance = document.documentElement.scrollHeight - innerHeight;
+    const fraction = distance > 0 ? Math.min(1, Math.max(0, scrollY / distance)) : 0;
+    fill?.style.setProperty('--reading-progress', String(fraction));
+    progress?.setAttribute('aria-valuenow', String(Math.round(fraction * 100)));
+    pending = false;
+  };
+  addEventListener('scroll', () => {
+    if (!pending) { pending = true; requestAnimationFrame(updateProgress); }
+  }, { passive: true });
+  addEventListener('resize', updateProgress);
+  new ResizeObserver(updateProgress).observe(document.body);
+  updateProgress();
+
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const cards = document.querySelectorAll<HTMLElement>('.home-path');
+  const reset = (card: HTMLElement) => {
+    card.style.removeProperty('--card-tilt-x');
+    card.style.removeProperty('--card-tilt-y');
+  };
+  cards.forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      if (motion.matches || event.pointerType !== 'mouse') return;
+      const box = card.getBoundingClientRect();
+      card.style.setProperty('--card-tilt-x', `${(0.5 - (event.clientY - box.top) / box.height) * 4}deg`);
+      card.style.setProperty('--card-tilt-y', `${((event.clientX - box.left) / box.width - 0.5) * 4}deg`);
+    });
+    card.addEventListener('pointerleave', () => reset(card));
+    card.addEventListener('pointercancel', () => reset(card));
+  });
+  motion.addEventListener('change', () => cards.forEach(reset));
+</script>
