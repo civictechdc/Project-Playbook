@@ -1,0 +1,18 @@
+---
+import Search from '@astrojs/starlight/components/Search.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import LogoIntro from './LogoIntro.astro';
+import PageMotion from './PageMotion.astro';
+
+---
+
+<div class="playbook-header">
+  <a class="playbook-brand" href="/" aria-label="Civic Tech DC Playbook home">
+    <!-- Official asset from civictechdc/civictechdc-website, _images/logos/civic-tech-dc.svg. -->
+    <img class="brand-mark" src="/images/civic-tech-dc-logo.svg" alt="" width="72" height="72" />
+    <span><strong>Civic Tech DC</strong><span class="brand-subtitle">The project playbook</span></span>
+  </a>
+  <div class="playbook-tools"><Search /><ThemeSelect /></div>
+</div>
+<LogoIntro />
+<PageMotion />

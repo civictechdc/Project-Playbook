@@ -41,6 +41,9 @@ jobs:
       - name: Build Site
         run: npm run build
 
+      - name: Check Internal Links
+        run: npm run check:links
+
       - name: Setup Pages
         uses: actions/configure-pages@v6
 

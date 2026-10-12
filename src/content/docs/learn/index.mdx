@@ -1,24 +1,26 @@
 ---
 title: What is Civic Tech?
 description: Understand civic technology, where it came from, and how it can serve communities.
+prev: false
+next: false
 ---
-import { Aside, Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import ImageText from '../../../components/ImageText.astro';
+
+import GuideCards from '../../../components/GuideCards.astro';
 
 <div class="no-left-nav"></div>
 
-<img
-class="civic-tech-float"
-src="/images/whatiscivictech.jpg"
-alt="What is civic tech"
-/>
+<ImageText src="/images/whatiscivictech.jpg" alt="Civic Tech DC community gathering">
 
-In October 2012, DC folks showed up to the first meeting of what would become Code for DC. People came ready to build solutions, but cofounder Justin Grimes started with a question instead: [“Do you engage civically?”](https://technical.ly/civic-news/help-code-dc-14-civic-hacking-projects/)
+In October 2012, DC residents gathered for the first meeting of Code for DC, the local Code for America brigade. People came ready to build solutions, but cofounder Justin Grimes opened with a question instead: [“Do you engage civically?”](https://technical.ly/civic-news/help-code-dc-14-civic-hacking-projects/)
 
-Most of the room couldn’t say which ward they lived in, let alone their [Advisory Neighborhood Commission (ANC)](https://oanc.dc.gov/), D.C.’s neighborhood bodies of local government. With that, Grimes led a team to build ANC Finder, a simple tool that tells you what ANC you are part of and how to contact your representative. It was later recommended on the DC Board of Ethics and Government Accountability website.
+The question mattered because building something useful for a community starts with understanding how civic life works. Knowing who represents your neighborhood, how local decisions are made, and where people struggle to participate helps you identify problems worth working on.
 
-Notice what happened there. The folks started with a question about civic life, found a challenge their neighbors were experiencing, and then use technology to fix it.
+Most of the room couldn’t say which ward they lived in, let alone identify their [Advisory Neighborhood Commission (ANC)](https://oanc.dc.gov/), one of D.C.’s neighborhood bodies of local government. With that, Grimes led a team to build ANC Finder, a simple tool that tells you which ANC you are part of and how to contact your representative. It was later recommended on the DC Board of Ethics and Government Accountability website.
 
-That’s where civic tech begins for us: start with what the people care about. 
+That experience still informs Civic Tech DC today. We start by understanding a civic problem and working with the people affected by it, then consider how technology can help. ANC Finder is an early example of that approach: a question about participation led to a practical tool that helped neighbors connect with their local representatives.
+
+</ImageText>
 
 ## Civic Tech 101
 
@@ -36,45 +38,29 @@ Here at Civic Tech DC, we define civic tech as:
 
 For us, this definition starts with people and civic problems. We focus first on the processes and systems that shape civic life through human-centered design and then consider where technology can help. The volunteer projects we build are designed to be:
 
-<CardGrid>
-  <Card title="Adaptable" icon="puzzle">
-    to diverse community needs.
-  </Card>
-  <Card title="Reusable" icon="random">
-    across different communities and contexts.
-  </Card>
-  <Card title="Scalable" icon="rocket">
-    for lasting impact.
-  </Card>
-  <Card title="Collaborative" icon="heart">
-    with people encouraged to fork, build upon, and contribute back to existing projects.
-  </Card>
-</CardGrid>
+<div class="civic-principles">
+  <div><h3>Adaptable</h3><p>to diverse community needs.</p></div>
+  <div><h3>Reusable</h3><p>across different communities and contexts.</p></div>
+  <div><h3>Scalable</h3><p>for lasting impact.</p></div>
+  <div><h3>Collaborative</h3><p>with people encouraged to fork, build upon, and contribute back to existing projects.</p></div>
+</div>
 
 Our range of work is wide. ANC Finder was one of our earliest tools, but we’ve also built [dozens of tools](https://www.civictechdc.org/archive-dig/) ranging from 
 [OurDCSchools.org](https://e-pluribusunum.org/2014/04/23/code-for-dc-launches-ourdcschools-org-an-open-government-platform-for-proposed-school-policy/) 
-with support from the Deputy Mayor for Education (DME), and DC Crash Bots, which was featured and nominated for a 
+built with support from the Deputy Mayor for Education (DME), to DC Crash Bots, which was featured and nominated for a
 [2021 Technical.ly Award](https://technical.ly/dc/2021/05/07/this-code-for-dc-project-is-updating-the-citys-car-crash-data-for-safer-streets/). Some projects are websites and web apps, some are data analysis, and some are workshops or designed materials.
 
-At Civic Tech DC, a project does not need to be a sophisticated app or platform. What we measure success in is whether people are using available tools and approaches to solve civic problems.
+At Civic Tech DC, a project does not need to be a sophisticated app or platform. What we measure success by is whether people are using available tools and approaches to solve civic problems.
 
-## So, How We Engage Civically?
+## So, How Do We Engage Civically?
 
-The name of the organization has changed from Code for DC to Civic Tech DC since that first meeting in 2012, but the principles that drive our work has not. 
+The name of the organization has changed from Code for DC to Civic Tech DC since that first meeting in 2012, but the principles that drive our work have not.
 Everyone is welcome to our community, and you don’t need to write code to start, just a willingness to work with others on an issue you care about.
 
 
-<LinkCard
-  title="Ready to dig in?"
-  href="/join"
-/>
+<GuideCards cards={[{"title": "Ready to dig in?", "href": "/join"}, {"title": "Learn about Civic Tech DC's history", "href": "/resources/history/"}]} />
 
-<LinkCard
-  title="Interested in learning about Civic Tech DC's history?"
-  href="/history"
-/>
-
-## Explore Civic Tech
+## Civic Tech Resources
 
 Curious to go deeper into the field of civic tech? Explore these books and resources:
 

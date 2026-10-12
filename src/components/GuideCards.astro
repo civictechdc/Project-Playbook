@@ -1,0 +1,19 @@
+---
+interface Props {
+  cards: { title: string; href: string; description?: string }[];
+  label?: string;
+  showArrow?: boolean;
+}
+const { cards, label = 'Related guides' } = Astro.props;
+---
+
+<nav class="learn-topics track-choices guide-navigation" aria-label={label}>
+  <div class="topic-grid">
+    {cards.map((card, index) => (
+      <a href={card.href} class:list={['topic-card home-path', index % 2 ? 'topic-principles home-path-join' : 'topic-history home-path-learn']}>
+        {!card.title.startsWith('Explore') && <span class="guide-navigation-label">{card.title.startsWith('Back') ? 'Return to' : 'Explore'}</span>}
+        <div class="topic-bottom"><h3>{card.title}</h3>{card.description && <p>{card.description}</p>}</div>
+      </a>
+    ))}
+  </div>
+</nav>

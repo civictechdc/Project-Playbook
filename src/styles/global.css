@@ -168,11 +168,11 @@ section > h2 {
   line-height: 1.6;
   margin: 24px 0;
   padding: 18px 22px;
-  background: #e3e7f2;
-  border-left: 5px solid #152e4d;
+  background: #e6eef7;
+  border-left: 5px solid #104378;
   border-radius: 12px;
   font-style: italic;
-  color: #0d2c54;
+  color: #104378;
 }
 
 .history-quote {
@@ -180,11 +180,11 @@ section > h2 {
   line-height: 1.6;
   margin: 32px 0;
   padding: 20px 24px;
-  background: #e3e7f2;
-  border-left: 5px solid #152e4d;
+  background: #e6eef7;
+  border-left: 5px solid #104378;
   border-radius: 12px;
   font-style: italic;
-  color: #0d2c54;
+  color: #104378;
 }
 
 /* Definition callout */
@@ -225,83 +225,6 @@ section > h2 {
    STARLIGHT OVERRIDES (ALL PAGES)
    ========================================= */
 
-/* Hide Starlight's automatically generated page title */
-.sl-markdown-content > h1:first-child {
-  display: none !important;
-}
-
-.sl-page-title {
-  display: none !important;
-}
-
-/* Remove the extra space above the custom pages */
-.hero {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.playbook-intro {
-  padding-top: 1rem !important;
-}
-
-.sl-markdown-content {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.sl-markdown-content > :first-child {
-  margin-top: 0 !important;
-}
-
-/* Hide previous / next links at the bottom of pages */
-.pagination-links {
-  display: none !important;
-}
-
-
-/* =========================================
-   LAYOUT: NO LEFT NAV ON DESIGNED PAGES
-   Keeps the right-hand "On this page" outline.
-   A page gets this layout if it contains any of
-   these classes. Add <div class="no-left-nav"></div>
-   to any other page that should use it.
-   ========================================= */
-
-/* Hide the left nav on designed pages */
-:root:has(.no-left-nav, .learn-page, .join-hero, .build-page) :is(.sidebar, .sidebar-pane, #starlight__sidebar, starlight-menu-button) {
-  display: none !important;
-}
-
-@media (min-width: 50rem) {
-  :root:has(.no-left-nav, .learn-page, .join-hero, .build-page) {
-    --sl-content-inline-start: 2rem !important;
-  }
-
-  :root:has(.no-left-nav, .learn-page, .join-hero, .build-page) .sl-container {
-    max-width: none !important;
-    margin-inline: 0 !important;
-  }
-
-  :root:has(.no-left-nav, .learn-page, .join-hero, .build-page) .lg\:sl-flex {
-    width: 100% !important;
-  }
-
-  /* Content takes all remaining space */
-  :root:has(.no-left-nav, .learn-page, .join-hero, .build-page) .main-pane {
-    flex: 1 1 auto !important;
-    width: auto !important;
-    min-width: 0;
-  }
-
-  /* Remove leftover left spacing, then add the small gap back */
-  :root:has(.no-left-nav, .learn-page, .join-hero, .build-page) .main-frame {
-    padding-inline-start: 10rem !important;
-  }
-
-  :root:has(.no-left-nav, .learn-page, .join-hero, .build-page) .content-panel {
-    margin-inline-start: 0 !important;
-  }
-}
 /* =========================================
    LEARN PAGE — VISUAL DESIGN
    ========================================= */
@@ -502,19 +425,19 @@ section > h2 {
 }
 
 .topic-history {
-  background: #dce8df;
+  background: #e4edf7;
 }
 
 .topic-principles {
-  background: #e8e0d5;
+  background: #f5e8c8;
 }
 
 .topic-government {
-  background: #dce4ed;
+  background: #e9edf1;
 }
 
 .topic-ai {
-  background: #e4ddea;
+  background: #e8e4ef;
 }
 
 .topic-top {
@@ -1094,19 +1017,19 @@ section > h2 {
 /* Card backgrounds */
 
 .build-start {
-  background: #dce8df;
+  background: #e4edf7;
 }
 
 .build-lead {
-  background: #e8e0d5;
+  background: #f5e8c8;
 }
 
 .build-grow {
-  background: #dce4ed;
+  background: #e9edf1;
 }
 
 .build-sustain {
-  background: #e4ddea;
+  background: #e8e4ef;
 }
 
 
@@ -1219,27 +1142,6 @@ section > h2 {
 
 
 /* =========================================
-   RIGHT SIDEBAR — ALL STarlight PAGES
-   ========================================= */
-
-@media (min-width: 50rem) {
-  /* Narrow the right sidebar column */
-  .right-sidebar-container {
-    flex: 0 0 12rem !important;
-    width: 12rem !important;
-    min-width: 12rem !important;
-    max-width: 12rem !important;
-  }
-
-  /* Keep the sidebar contents within the new width */
-  .right-sidebar {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
-}
-
-/* =========================================
    HISTORY
    ========================================= */
 
@@ -1341,5 +1243,5 @@ section > h2 {
 
 /* Add right padding to AWS Account Access page */
 body:has(.no-right-nav) .sl-markdown-content {
-  padding-right: 7rem;
+  padding-right: 0;
 }

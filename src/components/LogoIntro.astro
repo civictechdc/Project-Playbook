@@ -1,0 +1,66 @@
+<div class="logo-intro" aria-hidden="true">
+  <img src="/images/civic-tech-dc-logo.svg" alt="" width="160" height="160" />
+</div>
+
+<style>
+  .logo-intro { display: none; }
+  :global(html[data-logo-intro]) .logo-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    background: var(--pb-paper);
+    pointer-events: none;
+  }
+  :global(html[data-logo-intro-ready]) .logo-intro {
+    animation: reveal-page 250ms ease-out 650ms forwards;
+  }
+  .logo-intro img {
+    width: clamp(120px, 25vw, 160px);
+    height: auto;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+  }
+  :global(html[data-logo-intro-ready]) .logo-intro img {
+    animation: reveal-logo 450ms ease-out both;
+  }
+  @keyframes reveal-logo {
+    from { opacity: 0; transform: scale(.92); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes reveal-page {
+    to { opacity: 0; visibility: hidden; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-intro { display: none !important; animation: none !important; }
+  }
+</style>
+
+<script>
+  const intro = document.querySelector<HTMLElement>('.logo-intro');
+  const image = intro?.querySelector('img');
+  const root = document.documentElement;
+  const finish = () => {
+    delete root.dataset.logoIntro;
+    delete root.dataset.logoIntroReady;
+    intro?.remove();
+  };
+  if (intro && image && root.hasAttribute('data-logo-intro')) {
+    const reveal = () => {
+      if (!image.naturalWidth) { finish(); return; }
+      root.dataset.logoIntroReady = '';
+      intro.addEventListener('animationend', (event) => {
+        if (event.target === intro) finish();
+      });
+      // Also remove it if an animation is interrupted or styles cannot load.
+      setTimeout(finish, 1100);
+    };
+    if (image.complete) reveal();
+    else {
+      image.addEventListener('load', reveal, { once: true });
+      image.addEventListener('error', finish, { once: true });
+    }
+  } else finish();
+</script>

@@ -1,0 +1,33 @@
+---
+import PageTitle from '@astrojs/starlight/components/PageTitle.astro';
+const { entry } = Astro.locals.starlightRoute;
+const path = Astro.url.pathname.replace(/\/$/, '').toLowerCase();
+const parents: { label: string; href: string }[] = [];
+if (path && path !== '/404') {
+  parents.push({ label: 'Home', href: '/' });
+  if (path.startsWith('/join') || path === '/resources/contributionpaths') {
+    if (path !== '/join') parents.push({ label: 'Join', href: '/join/' });
+  } else if (path === '/learn' || path === '/resources/history') {
+    if (path !== '/learn') parents.push({ label: 'Learn', href: '/learn/' });
+  } else if (path.startsWith('/build') || ['/resources/projectsetup', '/resources/projectlifecycle', '/resources/lead', '/resources/grow', '/resources/projects'].includes(path)) {
+    if (path !== '/build') parents.push({ label: 'Build', href: '/build/' });
+    if (path.startsWith('/build/incubatortrack/')) parents.push({ label: 'Incubator Track', href: '/build/incubatortrack/' });
+  } else if (path.startsWith('/resources/technical/') || path === '/resources/aicivictech') {
+    parents.push({ label: 'Technical Resources', href: '/resources/technical/' });
+  }
+}
+---
+
+{parents.length > 0 && <nav class="playbook-breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
+  <ol>{parents.map((parent) => <li><a href={parent.href}>{parent.label}</a><span aria-hidden="true">›</span></li>)}<li aria-current="page">{entry.data.title}</li></ol>
+</nav>}
+<PageTitle />
+{entry.data.description && <span hidden data-pagefind-meta="description">{entry.data.description}</span>}
+
+<style>
+  .playbook-breadcrumbs { margin-top: .5rem; font-size: .9rem; line-height: 1.5; }
+  ol { display: flex; flex-wrap: wrap; gap: .35rem .6rem; list-style: none; margin: 0; padding: 0; }
+  li { display: inline-flex; gap: .6rem; color: var(--pb-ink); }
+  a { color: var(--pb-accent); font-weight: 700; }
+  span { color: var(--pb-ink); }
+</style>
