@@ -91,6 +91,8 @@ body {
 h1#_top { font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.08; letter-spacing: -.045em; font-weight: 700; padding-block: 1rem; }
 .sl-markdown-content { line-height: 1.8; }
 .sl-markdown-content p { opacity: 1; }
+.sl-markdown-content :is(p, li, td, th, blockquote) :is(strong, b) { color: var(--pb-blue); }
+.sl-markdown-content :is(.guide-navigation, .pagination-links, .error-page-action) :is(strong, b) { color: inherit; }
 .sl-markdown-content .technical-choices .topic-bottom p { font-weight: 400; }
 .sl-markdown-content:not(:has(.playbook-home)) a:not(.sl-anchor-link) { font-weight: 700; }
 .sl-markdown-content .finding-people-next-steps h2 { margin-bottom: .5rem; }
@@ -339,7 +341,7 @@ body:not(:has(.playbook-home)) .sl-markdown-content { container-type: inline-siz
 
 /* Black reading text in light mode; headings and link accents remain blue. */
 :root[data-theme='light'] .sl-markdown-content :is(p, li, td, blockquote) { color: #000; }
-.sl-markdown-content :is(p, li, td, blockquote) :is(strong, em) { color: inherit; }
+.sl-markdown-content :is(p, li, td, blockquote) em { color: inherit; }
 :root[data-theme='light'] .sidebar-content a:not([aria-current='page']) { color: #000; }
 .sl-markdown-content p.project-night-invitation,
 :root[data-theme='light'] .sl-markdown-content p.project-night-invitation {
