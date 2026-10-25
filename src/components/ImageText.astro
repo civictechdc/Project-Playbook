@@ -1,8 +1,8 @@
 ---
 import sharp from 'sharp';
 import { join } from 'node:path';
-interface Props { src: string; alt: string; compact?: boolean; caption?: string; }
-const { src, alt, caption } = Astro.props;
+interface Props { src: string; alt: string; compact?: boolean; caption?: string; smaller?: boolean; }
+const { src, alt, caption, smaller = false } = Astro.props;
 let width: number | undefined;
 let height: number | undefined;
 try {
@@ -13,7 +13,7 @@ try {
   // Keep references to images that are available only in a local checkout usable.
 }
 const ratio = width && height ? width / height : 1.5;
-const imageWidth = ratio < .85 ? '36%, 24rem' : ratio > 1.6 ? '48%, 32rem' : '42%, 28rem';
+const imageWidth = smaller ? '36%, 24rem' : ratio < .85 ? '36%, 24rem' : ratio > 1.6 ? '48%, 32rem' : '42%, 28rem';
 const imageStyle = `--image-width: min(${imageWidth}${width ? `, ${width}px` : ''}); --image-natural-width: ${width ? `${width}px` : '100%'}`;
 ---
 <div class="image-text" style={imageStyle}>
