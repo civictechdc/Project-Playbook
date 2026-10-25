@@ -69,6 +69,7 @@ export default defineConfig({
           items: [
             { label: 'Technical Resources', slug: 'resources/technical' },
             { label: 'AI Resources for Civic Tech', slug: 'resources/aicivictech' },
+            { label: 'Keeping Communities Going', slug: 'resources/keeping-communities-going' },
           ],
         },
       ],
