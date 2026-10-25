@@ -127,7 +127,7 @@ html:has(.error-page-action) .sl-markdown-content { max-width: 40rem; margin-inl
 .sl-markdown-content blockquote { border-color: var(--pb-accent); background: var(--sl-color-accent-low); padding: 1.25rem 1.5rem; border-radius: 0 .7rem .7rem 0; }
 .sl-markdown-content :is(table, .card) { background: var(--pb-surface); }
 .sl-markdown-content table { font-size: .9rem; }
-.sl-markdown-content th { color: var(--pb-ink); background: var(--sl-color-accent-low); }
+.sl-markdown-content th { color: var(--pb-ink); background: var(--sl-color-accent-low); font-weight: 700; font-size: 1rem; }
 .sl-markdown-content :is(th, td) { padding: 1rem; }
 .sidebar-content a[aria-current='page'] { border-radius: .5rem; }
 .topic-card, .build-topic-card { color: #104378 !important; }
