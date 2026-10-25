@@ -19,6 +19,7 @@ export default defineConfig({
 
       components: {
         Header: './src/components/PlaybookHeader.astro',
+        Sidebar: './src/components/ProjectResourcesSidebar.astro',
         PageTitle: './src/components/PlaybookPageTitle.astro',
         Head: './src/components/PlaybookHead.astro',
       },
