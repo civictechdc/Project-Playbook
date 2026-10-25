@@ -60,7 +60,7 @@ export default defineConfig({
             { label: 'Lead a Project Night', slug: 'resources/lead' },
             { label: 'Grow a Project', slug: 'resources/grow' },
             { label: 'Navigating Project Challenges', slug: 'resources/navigating-project-challenges' },
-            { label: '🔥 Passing the Torch', slug: 'resources/passing-the-torch' },
+            { label: 'Passing the Torch 🔥', slug: 'resources/passing-the-torch' },
             { label: 'Working With Community Partners', slug: 'build/community-partners' },
             { label: 'Maintain or Close a Project', slug: 'build/maintain-or-close' },
           ],

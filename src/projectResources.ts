@@ -3,7 +3,7 @@ export const projectResources = [
   { label: 'Grow Your Project', slug: 'resources/grow' },
   { label: 'Build Your Toolkit', slug: 'resources/technical' },
   { label: 'Navigating Project Challenges', slug: 'resources/navigating-project-challenges' },
-  { label: '🔥 Passing the Torch', slug: 'resources/passing-the-torch' },
+  { label: 'Passing the Torch 🔥', slug: 'resources/passing-the-torch' },
   { label: 'Keeping Communities Going', slug: 'resources/keeping-communities-going' },
 ];
 
