@@ -12,157 +12,74 @@ next:
 import CopyResource from '../../../../components/CopyResource.astro';
 import handoffTemplate from '../../../../../public/templates/project-handoff.md?raw';
 
-Civic tech projects often outlast the people who start them. Volunteers change jobs, move away, take on new responsibilities, or decide it's time to pursue something else. Sometimes a project is also ready to move from a volunteer team to the community organization or government agency that will use and maintain it.
-
-These transitions are a normal part of volunteer-led work. But without a clear handoff, projects can lose momentum, important knowledge can disappear, and the people taking over may struggle to understand what has already been done.
-
-A good handoff doesn't require extensive documentation or a complicated process. It means making sure the next person understands the project, has access to what they need, and knows what responsibilities they're taking on.
-
-## Copy the Handoff Template
-
-Copy this template into your project documentation and fill in the relevant sections. Delete anything that doesn't apply.
+Transitions are a normal part of running a civic tech project, and having a good handoff plan is important. It is essential to loop in the Civic Tech DC organizers to help with the process.
 
 <CopyResource text={handoffTemplate} label="Copy the Handoff Template" downloadHref="/templates/project-handoff.md" />
 
-## 1. Understand What You're Handing Off
+## Understand What You're Handing Off
 
-Not every transition looks the same. Before getting started, identify what is changing and who will be responsible afterward.
+Before making the plan, let's identify who is at the center of the handoff:
 
-**Project leadership:** A project lead is stepping away and another volunteer is taking over. The project continues within Civic Tech DC, but responsibility for coordinating the team, communicating with partners, and managing priorities changes hands.
+- **The project lead is stepping away**, and someone else will need to coordinate.
+- **An important contributor is leaving:** someone who manages a big part of the project, like the database, website, research, or community outreach.
+- **The project is ready for its community partner.** The handoff may involve training, documentation, and ongoing maintenance responsibilities.
+- **The project is ending.** Even if development stops, the resources may still be useful to others.
 
-**Individual responsibilities:** A contributor who manages a particular part of the project, such as the database, website, or community outreach, is leaving. The project lead should work with them to transfer the necessary knowledge and access.
+## Start the Conversation Early
 
-**Community partner ownership:** A project has reached a point where the nonprofit, government agency, or community organization it serves is ready to take responsibility for using and maintaining the work.
+Whenever possible, begin planning a handoff before someone leaves or the project reaches its final milestone.
 
-**Project closure:** A project is ending, but its code, documentation, findings, or other resources may still be useful to others.
+**If a project lead is leaving:** Talk with contributors and Civic Tech DC organizers about who might be interested in taking over. Don't assume the most active developer wants to become the next lead.
 
-Each situation requires a slightly different approach. The goal is to avoid leaving people uncertain about who owns what or what happens next.
+**If a contributor is leaving:** Ask what they're currently responsible for and ask them to document what they have been working on.
 
-## 2. Start the Conversation Early
+**If you're handing work to a community partner:** Ask who will use the tool and what support they need.
 
-Whenever possible, begin planning a handoff before the person leaving has stepped away.
+## Document the State of the Project
 
-For project leads, this means communicating with both the project team and Civic Tech DC organizers. For projects with community partners, it may also mean discussing the transition with the organization's primary contact.
-
-Some useful questions to ask:
-
-When will the current lead or contributor step away? Who is willing and able to take over? What responsibilities need to be transferred?
-
-Are there upcoming deadlines or commitments? What knowledge currently exists only in someone's head? Will the outgoing person be available to answer questions after the transition?
-
-Don't assume that the most active contributor automatically wants to become the next project lead. Leadership involves coordination, communication, and responsibility for the project as a whole, not just technical contributions.
-
-If no one is available to take over, talk with Civic Tech DC organizers about whether the project should pause while a new lead is identified.
-
-## 3. Document the State of the Project
-
-The person taking over shouldn't have to reconstruct months of decisions from Slack conversations and GitHub issues.
-
-Before the handoff, prepare a short project summary that explains where things stand.
-
-At minimum, include:
+Before the handoff, prepare a short summary in a document.
 
 | Information | What to document |
-|---|---|
+| --- | --- |
 | Project purpose | What problem are you trying to solve, and for whom? |
-| Current status | What's working, what's in development, and what's unfinished? |
-| Key contacts | Who are the project leads, contributors, and community partners? |
+| Current status | What's working, in development, or unfinished? |
+| Key contacts | Who are the contributors, organizers, and community partners? |
 | Upcoming priorities | What are the next two or three things that need attention? |
 | Important decisions | What choices have already been made, and why? |
-| Known challenges | What technical, organizational, or partnership issues remain unresolved? |
-| Resources | Where are the code, documentation, design files, and other materials? |
+| Known challenges | What problems remain unresolved? |
+| Resources | Where do the code, documentation, designs, and other materials live? |
 
-You don't need to create a lengthy report. A well-maintained README, a project handoff document, or a GitHub issue can be enough.
+Depending on the handoff, add a few more details:
 
-The important thing is that someone unfamiliar with the project's recent history can understand where to begin.
+- For a new project lead: Include meeting schedules, contributor availability, outstanding commitments, and how the team typically organizes work.
+- For new contributors: Document what your responsibilities were and any login or account access they need.
+- For a community partner: Include instructions for using the tool and updating content.
+- For a closing project: Explain why the project stopped and what someone would need to know to restart or reuse the work.
 
-## 4. Transfer Access and Responsibilities
+## Communicate the Transition
 
-A project handoff is not complete until the next person can actually manage the resources they need.
+Once the handoff is confirmed, let the project team, Civic Tech DC organizers, and any other appropriate folks know. The announcement doesn't need to be elaborately broadcast, but it should explain who's stepping away and when the transition will happen.
 
-Depending on the project, this may include:
+For contributors, this is also a good opportunity to recognize their contributions. Volunteers often spend significant time working behind the scenes, and that work deserves acknowledgment.
 
-- GitHub repositories and organization permissions
-- Hosting services, domains, and deployment tools
-- Shared documents and design files
-- Project communication channels
-- Community partner contacts and relevant agreements
-- Administrative accounts, service subscriptions, and billing responsibilities
+## When There Isn't Anyone to Take Over
 
-**Never share personal passwords or API keys through Slack or ordinary documents.** Where possible, transfer ownership through the service's built-in permissions system and rotate credentials when necessary.
+Sometimes a project reaches a transition point and no one is ready or willing to take responsibility.
 
-For resources managed by Civic Tech DC, such as organization-owned GitHub repositories or shared infrastructure, contact the organizing team to coordinate changes in access.
-
-Also consider whether the outgoing contributor's access should be removed once the transition is complete. This protects both the project and the person leaving.
-
-## 5. Make Time for a Transition Conversation
-
-Documentation is useful, but it doesn't always capture the context behind decisions.
-
-If possible, arrange a short meeting between the outgoing and incoming leads. Walk through the project, review outstanding work, and discuss any challenges that might not be obvious from the documentation.
-
-A useful handoff conversation should cover:
-
-**Where we started:** What problem was the project originally trying to solve, and how has that understanding changed?
-
-**Where we are now:** What's been accomplished, and what remains unfinished?
-
-**What we've learned:** Which approaches worked, which didn't, and what would you do differently?
-
-**What happens next:** What decisions or tasks need attention first?
-
-If the project has a community partner, introduce the incoming lead directly rather than simply passing along their contact information. Relationships are an important part of the project, and a personal introduction helps maintain continuity.
-
-Whenever possible, have the incoming lead run a Project Night or coordinate a meeting while the outgoing lead is still available to provide support.
-
-## 6. Communicate the Transition to Your Team
-
-Once the transition is confirmed, let contributors and community partners know what's changing.
-
-The announcement doesn't need to be elaborate. Explain who is stepping away, who is taking over, when the transition will happen, and whether anything about the project's priorities or meeting schedule will change.
-
-This is also a good opportunity to recognize the outgoing person's contributions. Volunteer work is often sustained by people who dedicate significant time behind the scenes, and those contributions deserve acknowledgment.
-
-Avoid creating the expectation that someone who steps away must remain available indefinitely. If they're willing to answer occasional questions, that's helpful, but the incoming team should be prepared to operate independently.
-
-## 7. When There Isn't Anyone to Take Over
-
-Sometimes a project reaches a transition point and no one is ready or willing to assume responsibility.
-
-This can be difficult, especially when the team has invested significant time in the work. But continuing a project without someone accountable for coordinating it can create problems for contributors and community partners.
-
-If no successor is available:
-
-**Notify Civic Tech DC organizers and community partners.** Explain the situation and identify any outstanding commitments. **Assess what's essential.** Determine whether there are active users, services, or deadlines that require attention.
-
-**Explore alternatives.** Could the project be transferred to a partner organization, maintained at a smaller scale, or temporarily paused? **Preserve the work.** Make sure the code, documentation, and other useful materials are accessible, while protecting any sensitive information.
-
-**Communicate the decision.** Let contributors and relevant stakeholders know whether the project is pausing, transitioning, or closing.
-
-See our [Maintaining or Closing a Project](/build/maintain-or-close/) guide for additional guidance.
+If this happens, reach out to Civic Tech DC organizers as soon as possible! They can help you figure out what needs immediate attention and explore next steps, whether that's finding a new lead, transferring the work to another team, or temporarily pausing the project.
 
 ## Project Handoff Checklist
 
-Before considering a handoff complete, make sure the following steps have been addressed:
+Before considering a handoff complete, check that:
 
-- [ ] The incoming lead or responsible organization has agreed to take over.
-- [ ] Civic Tech DC organizers have been informed.
-- [ ] Community partners have been notified and introduced to the new contact.
-- [ ] The project's current status and next priorities are documented.
-- [ ] Important files, repositories, and accounts are accessible to the appropriate people.
-- [ ] Ownership and administrative permissions have been updated.
-- [ ] Outstanding commitments and deadlines have been discussed.
-- [ ] Contributors know who to contact moving forward.
-- [ ] The outgoing person's access has been reviewed and adjusted as appropriate.
+- The incoming lead, contributor, or partner has agreed to take over.
+- Civic Tech DC organizers have been informed.
+- Community partners know who their new contact is.
+- The project's current status and next priorities are documented.
+- Important files, repositories, and accounts are accessible.
+- Ownership and administrative permissions have been updated.
+- Outstanding commitments and deadlines have been discussed.
+- Contributors know who to contact moving forward.
+- The outgoing person's access has been reviewed.
 
-Not every project will need every step. Use this checklist as a starting point and adapt it to your team's needs.
-
----
-
-## Leaving a Project Better Than You Found It
-
-A successful handoff isn't about making sure everything is finished before you leave. Most civic tech projects will always have more ideas, features, and improvements than volunteers have time to pursue.
-
-Instead, focus on making it possible for someone else to continue the work without having to start over.
-
-One of the most valuable things a contributor can leave behind isn't necessarily another feature or line of code. It's the knowledge, relationships, and documentation that allow the next person to build on what came before.
+Not every project will need every step. Use this checklist as a starting point and adapt it to your situation.
