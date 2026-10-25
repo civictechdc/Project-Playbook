@@ -9,7 +9,7 @@ if (path && path !== '/404') {
     if (path !== '/join') parents.push({ label: 'Join', href: '/join/' });
   } else if (path === '/learn' || path === '/resources/history') {
     if (path !== '/learn') parents.push({ label: 'Learn', href: '/learn/' });
-  } else if (path.startsWith('/build') || ['/resources/projectsetup', '/resources/projectlifecycle', '/resources/lead', '/resources/grow', '/resources/projects'].includes(path)) {
+  } else if (path.startsWith('/build') || ['/resources/projectsetup', '/resources/projectlifecycle', '/resources/lead', '/resources/grow', '/resources/projects', '/resources/navigating-project-challenges', '/resources/passing-the-torch'].includes(path)) {
     if (path !== '/build') parents.push({ label: 'Build', href: '/build/' });
     if (path.startsWith('/build/incubatortrack/')) parents.push({ label: 'Incubator Track', href: '/build/incubatortrack/' });
   } else if (path.startsWith('/resources/technical/') || path === '/resources/aicivictech') {
