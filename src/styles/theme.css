@@ -135,6 +135,9 @@ html:has(.error-page-action) .sl-markdown-content { max-width: 40rem; margin-inl
 .sl-markdown-content :is(table, .card) { background: var(--pb-surface); }
 .sl-markdown-content table { font-size: .9rem; }
 .sl-markdown-content .handoff-page table { display: table; width: 100%; table-layout: fixed; }
+.handoff-template-paper { padding: 1.25rem 1.5rem; margin-block: 1.5rem; border: 1px solid #dce2e8; border-radius: .25rem; background: #fff; box-shadow: 0 2px 6px #1043780a; }
+.sl-markdown-content .handoff-template-paper a { color: #104378; font-size: 1.15rem; }
+.sl-markdown-content .handoff-template-paper p { color: #000; font-size: 1rem; margin: .5rem 0 0; }
 .sl-markdown-content .handoff-page :is(th, td) { overflow-wrap: anywhere; }
 .sl-markdown-content .handoff-page :is(th, td):first-child { width: 28%; }
 .sl-markdown-content th { color: var(--pb-ink); background: var(--sl-color-accent-low); font-weight: 700; font-size: 1rem; }
