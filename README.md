@@ -83,12 +83,12 @@ The component reads the image dimensions, preserves its aspect ratio, and stacks
 ## Navigation and design
 
 - `astro.config.mjs`: main sidebar groups and component configuration.
-- `src/projectResources.ts`: the six Project Resources guides and their display titles.
+- `src/projectResources.ts`: the five Project Resources guides and their display titles.
 - `src/components/ProjectResourcesSidebar.astro`: expandable guide headings on resource pages.
 - `src/routeData.ts`: which pages display a left sidebar.
 - `src/styles/theme.css`: shared colors, typography, spacing, and layout.
 
-Project Resources pages show their own six-guide sidebar. Expand a guide title to view its section links; Overview opens the full guide. Other pages retain the main navigation. Resource section links are generated from Markdown headings.
+Project Resources pages show their own five-guide sidebar. Expand a guide title to view its section links; Overview opens the full guide. Other pages retain the main navigation. Resource section links are generated from Markdown headings.
 
 ## Check changes
 
