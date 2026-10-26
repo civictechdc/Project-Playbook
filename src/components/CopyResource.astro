@@ -1,0 +1,45 @@
+---
+interface Props { text: string; label: string; downloadHref: string; }
+const { text, label, downloadHref } = Astro.props;
+---
+<section class="copy-resource" aria-label={label}>
+  <div class="resource-actions">
+    <button type="button" data-copy-resource>{label}</button>
+    <a href={downloadHref} download>Download template</a>
+    <span role="status" aria-live="polite"></span>
+  </div>
+  <details>
+    <summary>View and select the template</summary>
+    <pre tabindex="0"><code>{text}</code></pre>
+  </details>
+</section>
+
+<style>
+  .copy-resource { padding: 1.25rem; margin-block: 1.5rem; border: 1px solid var(--pb-line); border-radius: .35rem; background: var(--pb-surface); }
+  .resource-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem 1rem; }
+  button { cursor: pointer; padding: .65rem 1rem; border: 1px solid #104378; border-radius: .3rem; background: #104378; color: #fff; font: inherit; font-weight: 600; }
+  button:hover { background: #0c335c; }
+  a { color: var(--pb-accent); }
+  details { margin-top: 1rem; }
+  summary { cursor: pointer; }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 30rem; overflow: auto; padding: 1rem; font-size: .9rem; line-height: 1.6; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-resource]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const resource = button.closest('.copy-resource');
+      const text = resource?.querySelector('code')?.textContent;
+      const status = resource?.querySelector('[role="status"]');
+      if (!text || !status) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        status.textContent = 'Copied!';
+      } catch {
+        const details = resource?.querySelector('details');
+        if (details) details.open = true;
+        status.textContent = 'Select the template below to copy it, or use the download link.';
+      }
+    });
+  });
+</script>

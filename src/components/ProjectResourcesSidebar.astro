@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content';
+import Sidebar from '@astrojs/starlight/components/Sidebar.astro';
+import { projectResources, isProjectResource } from '../projectResources';
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+const resourcePage = isProjectResource(pathname);
+const entries = resourcePage ? await getCollection('docs') : [];
+const groups = await Promise.all((resourcePage ? projectResources : []).map(async (resource) => {
+  const entry = entries.find((entry) => entry.id.replace(/\/index$/, '') === resource.slug);
+  const headings = entry ? (await render(entry)).headings.filter((heading) => heading.depth === 2 || heading.depth === 3) : [];
+  return { ...resource, headings, active: pathname === '/' + resource.slug || pathname.startsWith('/' + resource.slug + '/') };
+}));
+---
+
+{resourcePage ? <nav class="resource-sidebar" aria-label="Project resources">
+  {groups.map((group) => <details open={group.active}>
+    <summary>{group.label}</summary>
+    <ul>
+      <li><a href={`/${group.slug}/`} aria-current={pathname === '/' + group.slug ? 'page' : undefined}>Overview</a></li>
+      {group.headings.map((heading) => <li class:list={{ 'subheading': heading.depth === 3 }}><a href={`/${group.slug}/#${heading.slug}`}>{heading.text}</a></li>)}
+      {group.slug === 'resources/technical' && <>
+        <li><a href="/resources/technical/github/">GitHub Organization Access</a></li>
+        <li><a href="/resources/technical/aws/">AWS Account Access</a></li>
+        <li><a href="/resources/technical/canva/">Canva Access</a></li>
+      </>}
+    </ul>
+  </details>)}
+</nav> : <Sidebar />}
+
+<style>
+  .resource-sidebar { color: var(--pb-muted); }
+  details { border-bottom: 1px solid var(--pb-line); }
+  summary { cursor: pointer; padding: .85rem .25rem; color: var(--pb-ink); font-size: 1rem; font-weight: 600; line-height: 1.5; }
+  ul { list-style: none; margin: 0 0 .75rem; padding: 0; }
+  li { margin: 0; }
+  a { display: block; padding: .35rem .5rem; color: var(--pb-muted); font-size: .9rem; line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
+  .subheading a { padding-inline-start: 1.25rem; }
+  a:hover { text-decoration: underline; }
+  a[aria-current='page'] { color: var(--pb-accent); background: var(--sl-color-accent-low); border-radius: .25rem; font-weight: 700; }
+</style>
