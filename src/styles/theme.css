@@ -268,7 +268,7 @@ body:has(.playbook-home) main > .content-panel > .sl-container > footer { displa
 .home-resource-grid h3 span { color: var(--pb-accent); transition: transform .2s; }
 .home-resource-grid a:hover h3 span { transform: translate(3px, -3px); }
 .home-resource-grid p { font-size: 1.1rem; color: var(--pb-muted); }
-.playbook-home .home-resource-grid a.community-book { position: relative; align-self: center; justify-self: end; width: min(calc(100% - 1rem), 31rem); margin: 1rem .5rem; padding: 1.2rem 1.25rem; border: 1px solid #10437825; border-left: .5rem solid #deaf4a; border-radius: .15rem .4rem .4rem .15rem; background: #e4edf7; color: #104378; box-shadow: 3px 3px 0 #fffdf8, 5px 5px 0 #10437830; transform: rotate(-4deg); transition: transform 180ms ease; }
+.playbook-home .home-resource-grid a.community-book { position: relative; align-self: center; justify-self: end; width: min(calc(100% - 1rem), 26rem); margin: 1rem .5rem; padding: 1.2rem 1.25rem; border: 1px solid #10437825; border-left: .5rem solid #deaf4a; border-radius: .15rem .4rem .4rem .15rem; background: #e4edf7; color: #104378; box-shadow: 3px 3px 0 #fffdf8, 5px 5px 0 #10437830; transform: rotate(-4deg); transition: transform 180ms ease; }
 .playbook-home .community-book-label { font-size: .75rem; color: #104378; }
 .playbook-home .home-resource-grid .community-book h3 { margin: .45rem 0; font-size: 1.35rem; line-height: 1.2; color: #104378; }
 .playbook-home .home-resource-grid .community-book p { font-size: .95rem; line-height: 1.45; color: #000; }
