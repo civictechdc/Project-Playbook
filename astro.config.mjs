@@ -56,7 +56,6 @@ export default defineConfig({
               ],
             },
             { label: 'Project Setup', slug: 'resources/projectsetup' },
-            { label: 'Project Cycle', slug: 'resources/projectlifecycle' },
             { label: 'Lead a Project Night', slug: 'resources/lead' },
             { label: 'Grow a Project', slug: 'resources/grow' },
             { label: 'Navigating Project Challenges', slug: 'resources/navigating-project-challenges' },
@@ -72,7 +71,7 @@ export default defineConfig({
             { label: 'AI Resources for Civic Tech', slug: 'resources/aicivictech' },
           ],
         },
-        { label: 'Community Organizing', items: [{ label: 'Keeping Communities Going', slug: 'resources/keeping-communities-going' }] },
+        { label: 'Community Organizing', items: [{ label: 'Sustaining Communities', slug: 'resources/keeping-communities-going' }] },
       ],
 
       social: [
