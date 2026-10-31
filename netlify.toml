@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://playbook.civictechdc.org/:splat"
+  status = 301
+  force = true
